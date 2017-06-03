@@ -12,11 +12,10 @@ var searchYouTube = (options, callback) => {
       videoEmbeddable: 'true'
     },
     success: function (data) {
-      console.log('data', data);
       return callback(data.items);
     },
     error: function (e) {
-      console.log('search error', e);
+      console.log('search error', options);
     }
   });
 };

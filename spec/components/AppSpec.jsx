@@ -10,7 +10,7 @@ describe('App', function() {
 
   beforeEach(function() {
     app = renderIntoDocument(
-      <App searchYouTube={() => {}}/>
+      <App searchYouTube={() => {}} API_KEY={window.YOUTUBE_API_KEY}/>
     );
   });
 
@@ -46,7 +46,7 @@ describe('App', function() {
     });
   });
 
-  xdescribe('when rendering live data from YouTube', function() {
+  describe('when rendering live data from YouTube', function() {
     var searchYouTubeStub;
 
     beforeEach(function() {
