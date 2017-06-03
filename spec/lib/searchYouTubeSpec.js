@@ -10,9 +10,12 @@ var getURLSearchParams = function(url) {
 };
 
 var hasSameShape = function(objectOne, objectTwo) {
+  console.log('YTS objectOne: ', objectOne);
+  console.log('YTS objectTwo', objectTwo);
   if (Object.keys(objectOne).length !== Object.keys(objectTwo).length) {
     return false;
   }
+
 
   for (var key in objectOne) {
     if (!key in objectTwo) {
