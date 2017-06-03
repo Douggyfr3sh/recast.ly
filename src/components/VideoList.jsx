@@ -1,17 +1,9 @@
 var VideoList = (props) => (
   <div className="video-list media">
-    {/* <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry /> */}
     {
       props.videos.map( (video) => {
-        return <VideoListEntry video={video}/>;
+        console.log(props);
+        return <VideoListEntry video={video} player={props.player}/>;
       })
     }
   </div>
