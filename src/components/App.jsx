@@ -80,7 +80,7 @@ class App extends React.Component {
     };
     //React Docs recommend to bind updatePlayer here:
     this.updatePlayer = this.updatePlayer.bind(this);
-    // this.searchYT = window.searchYouTube;
+    this.getYTVideos = _.debounce(this.getYTVideos, 500);
   }
 
   componentDidMount() {
@@ -111,7 +111,7 @@ class App extends React.Component {
   render() {
     if (this.state.videos.length > 0) {
       return (<div>
-          <Nav />
+          <Nav handleSearchInputChange={this.getYTVideos.bind(this)}/>
           <div className="col-md-7">
             <VideoPlayer video={this.state.playerVideo}/>
           </div>
