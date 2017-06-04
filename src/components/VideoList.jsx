@@ -1,8 +1,8 @@
-var VideoList = (props) => (
+var VideoList = ({videos, player}) => (
   <div className="video-list media">
     {
-      props.videos.map( (video) => {
-        return <VideoListEntry video={video} player={props.player}/>;
+      videos.map( (video) => {
+        return <VideoListEntry video={video} player={player} key={video.id.videoId}/>;
       })
     }
   </div>

@@ -104,7 +104,6 @@ class App extends React.Component {
   }
 
   updatePlayer(video) {
-    console.log('searchYT', this.props.searchYT);
     this.setState({playerVideo: video});
   }
 
